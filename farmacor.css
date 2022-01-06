@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(231, 227, 227);
+    display: flex;
+}
+
+.navbar {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: rgb(247, 240, 227); */
+    background: rgb(231, 227, 227);
+
+}
+ul li {
+    display: inline-block;
+    transform-style: preserve-3d;
+}
+
+ul li a {
+    color: #95bfba;
+    font-size: 16px;
+    font-family: arial;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    position: relative;
+}
+
+ul li a span {
+    display: block;
+    padding: 15px 20px;
+}
+
+ul li a span::before {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(48, 99, 196);
+    color: rgb(212, 45, 45);
+    padding: 15px 20px;
+    transform-style: preserve-3d;
+    transform: rotateX(90deg) translateY(50px);
+    transition: .3s;
+    transform-origin: bottom;
+}
+
+ul li a span:hover::before {
+    transform: rotateX(0deg) translateY(0px);
+}
+
+.container {
+        position: relative;
+        width: 100%;
+        background: #95bfba;
+        margin: 100px;
+        /* margin: 50px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        max-width: 1000px; */
+        min-height: 1000px;
+        box-shadow: 0 35px 55px ;
+        color: #fff;
+        background: linear-gradient(-45deg, #57ee52, #5968ee, #f32731);
+        background-size: 400% 400%;
+        animation: change 10s ease-in-out infinite;
+
+}
+
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.naslovna {
+    position: relative;
+    width: 97%;
+    margin: 20px;
+}
+
+.reklama {
+    position: relative;
+    width: 30%;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.callBtn {
+    position: relative;
+    display: inline-block;
+}
