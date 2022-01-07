@@ -23,4 +23,4 @@ function openPage() {
 //     }); 
 // }
 
-<script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=7cfdd55fa97fd3f9ff9923642e95e0defb9a873e'></script>
+
