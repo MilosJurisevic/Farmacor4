@@ -256,22 +256,3 @@ p {
     color:rgb(212, 45, 45);
     text-decoration:none;
 }
-
-#menjaBoje {
-    margin: 20px;
-    background: linear-gradient(-45deg, #57ee52, #5968ee, #f32731);
-    background-size: 400% 400%;
-    animation: change 10s ease-in-out infinite;
-}
-
-@keyframes change {
-    0%{
-        background-position: 0 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
-}
