@@ -1,8 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    background: rgb(231, 227, 227);
+    background: rgb(228, 224, 224);
     display: flex;
+    position: relative;
 }
 
 .navbar {
@@ -10,6 +11,14 @@ body {
     top: 50px;
     right: 0;
     width: 100%;
+}
+
+.logo {
+    position: absolute;
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 1100px;
+    
 }
 
 ul {
@@ -21,6 +30,7 @@ ul {
     transform: translate(-50%, -50%);
     /* background: rgb(247, 240, 227); */
     background: rgb(231, 227, 227);
+    float: right;
 
 }
 ul li {
@@ -29,7 +39,7 @@ ul li {
 }
 
 ul li a {
-    color: #95bfba;
+    color: rgb(104, 84, 84);
     font-size: 16px;
     font-family: arial;
     text-transform: uppercase;
@@ -37,6 +47,7 @@ ul li a {
     font-weight: bold;
     display: block;
     position: relative;
+    
 }
 
 ul li a span {
@@ -71,9 +82,12 @@ ul li a span:hover::before {
         display: grid;
         grid-template-columns: 1fr 2fr;
         max-width: 1000px; */
-        min-height: 1000px;
+        min-height: 900px;
         box-shadow: 0 35px 55px ;
         color: #fff;
+}
+        /* Opcija ako zelimo da pozadina menja boje
+        
         background: linear-gradient(-45deg, #57ee52, #5968ee, #f32731);
         background-size: 400% 400%;
         animation: change 10s ease-in-out infinite;
@@ -90,7 +104,88 @@ ul li a span:hover::before {
     100% {
         background-position: 0 50%;
     }
+} */
+
+
+
+.search {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 60px;
+    transition: 0.5s;
+    /* box-shadow: 0 0 0 5px #2573ef; */
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 100px;
 }
+
+.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.search.active {
+    width: 250px;
+}
+
+.search .input {
+    position: relative;
+    width: 300px;
+    height: 60px;
+    left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search .input input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    
+}
+
+/* .search .icon ::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #287dfc;
+    border-radius: 50%;
+    transform: translate(-4px, -4px);
+}
+
+.search .icon ::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background:  #287dfc;
+    transform: translate(6px, 6px) rotate(315deg);
+} */
+  
+
+
+
+
+
+
 
 .naslovna {
     position: relative;
@@ -98,14 +193,64 @@ ul li a span:hover::before {
     margin: 20px;
 }
 
-.reklama {
-    position: relative;
-    width: 30%;
-    margin-left: 20px;
-    margin-top: 50px;
+
+/* Style za dugme:
+ .callBtn {
+   margin-top: 300px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+   width: 200px;
+   height: 100px;
+   cursor: pointer;
+   background-color: #4CAF50;
+   /* text-decoration: none; */
+   /* border: none;
+} */ 
+
+h1 {
+    color: rgb(104, 84, 84);
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.callBtn {
+p {
+    color: rgb(104, 84, 84);
+    font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
+.line {
     position: relative;
-    display: inline-block;
+}
+
+
+.reklama {
+    position: absolute;
+    width: 30%;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}
+
+
+.gMap {
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.nasKon a {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: rgb(22, 83, 196);;
+}
+
+.nasKon a:hover{
+    color:rgb(212, 45, 45);
+    text-decoration:none;
 }
